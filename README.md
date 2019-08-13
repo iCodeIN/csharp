@@ -111,3 +111,40 @@ If you specify the keyword "out" in a function parameter declaration, modifying 
 # Operator differences
 
 null == NULL, ?? is a coalescing operator
+
+# Arrays
+
+Assigning Values to an Array
+You can assign values to individual array elements, by using the index number, like −
+
+```csharp
+double[] balance = new double[10];
+balance[0] = 4500.0;
+```
+
+You can assign values to the array at the time of declaration, as shown −
+
+```csharp
+double[] balance = { 2340.0, 4523.69, 3421.0};
+```
+
+You can also create and initialize an array, as shown −
+
+```csharp
+int [] marks = new int[5]  { 99,  98, 92, 97, 95};
+```
+
+You may also omit the size of the array, as shown −
+
+```csharp
+int [] marks = new int[]  { 99,  98, 92, 97, 95};
+```
+
+You can copy an array variable into another target array variable. In such case, both the target and source point to the same memory location −
+
+```csharp
+int [] marks = new int[]  { 99,  98, 92, 97, 95};
+int[] score = marks;
+```
+
+When you create an array, C# compiler implicitly initializes each array element to a default value depending on the array type. For example, for an int array all elements are initialized to 0.
