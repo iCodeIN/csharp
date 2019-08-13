@@ -64,7 +64,21 @@ dynamic allows for runtime dynamic typing.  It works as you might expect in othe
 
 # Strings
 
-String seems to be like the C++ string type or similar to java maybe.  "" or @"" are two ways of expressing quotes.  You can use the \ to extend lines.  The string replacement for WriteLine use similar syntax to python format string calls.  It uses {0} for first parameter, {1} for second, and so on..
+String seems to be like the C++ string type or similar to java maybe.  "" or @"" are two ways of expressing quotes.  You can use the \ to extend lines.  The string replacement for WriteLine use similar syntax to python format string calls.  It uses {0} for first parameter, {1} for second, and so on..  The string keyword is an alias for the System.String class.
+
+https://www.tutorialspoint.com/csharp/csharp_strings.htm
+
+# Structures
+
+struct is more like C++ than C, definitely just read this...
+
+https://www.tutorialspoint.com/csharp/csharp_struct.htm
+
+# Enums
+
+Work similar to C (I rarely use them anyways).
+
+https://www.tutorialspoint.com/csharp/csharp_enums.htm
 
 # Pointers
 
@@ -100,9 +114,43 @@ void TreatAnimalAsCat(Animal a) {
 
 loops and if logic generally seems the same as C.
 
-# Visibility
+
+```csharp
+int[] n = new int[10] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+foreach (int j in n ) {
+}
+```
+
+# Visibility and polymorphism
 
 public, private, and protected seem similar to C++.  internal is new and allows any function or class within the given file to access the member???
+
+static works the same as C++.  
+
+Inheritance is similar to C++, except no support for multiple inheritance (makes me like C# a little more :-)).  
+
+A bit to read here...
+https://www.tutorialspoint.com/csharp/csharp_polymorphism.htm
+
+# interface
+
+Allows you to define a series of public method signatures which must be implemented in a derived class.
+
+# namespace
+
+Works like C++, allows nested namespaces.
+
+# directives
+
+Mostly similar, but a few new ones.
+
+https://www.tutorialspoint.com/csharp/csharp_preprocessor_directives.htm
+
+# Operator overloading
+
+Makes me like C# a little less :-)
+
+https://www.tutorialspoint.com/csharp/csharp_operator_overloading.htm
 
 # Passing parameters
 
@@ -148,3 +196,40 @@ int[] score = marks;
 ```
 
 When you create an array, C# compiler implicitly initializes each array element to a default value depending on the array type. For example, for an int array all elements are initialized to 0.
+
+Multidimensional arrays are like the following...
+
+```csharp
+int [,] a = new int [3,4] {
+   {0, 1, 2, 3} ,   /*  initializers for row indexed by 0 */
+   {4, 5, 6, 7} ,   /*  initializers for row indexed by 1 */
+   {8, 9, 10, 11}   /*  initializers for row indexed by 2 */
+};
+```
+
+An element in 2-dimensional array is accessed by using the subscripts. That is, row index and column index of the array. For example,
+
+```csharp
+int val = a[2,3];
+```
+
+More C/C++ like...
+```csharp
+int[][] scores;
+scores = new int[5][];
+for (int i = 0; i < scores.Length; i++) {
+   scores[i] = new int[4];
+}
+```
+
+params allows expansion
+
+```csharp
+   public int AddElements(params int[] arr) {
+      foreach (int i in arr)
+      ...
+
+    int sum = app.AddElements(512, 720, 250, 567, 889);
+```
+
+https://www.tutorialspoint.com/csharp/csharp_array_class.htm
