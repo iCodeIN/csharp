@@ -54,13 +54,19 @@ ulong == unsigned long<br/>
 ushort == unsigned short<br/>
 bool == True or False<br/>
 
-sizeof works the same.
+# sizeof works the same
+
+# Dynamic types
 
 object allows for compiled dynamic typing.  It's called boxing when a type is converted to an object.  Unboxing is when an object is converted back to a type.
 
 dynamic allows for runtime dynamic typing.  It works as you might expect in other languages.
 
-String seems to be like the C++ string type or similar to java maybe.  "" or @"" are two ways of expressing quotes.  You can use the \ to extend lines.
+# Strings
+
+String seems to be like the C++ string type or similar to java maybe.  "" or @"" are two ways of expressing quotes.  You can use the \ to extend lines.  The string replacement for WriteLine use similar syntax to python format string calls.  It uses {0} for first parameter, {1} for second, and so on..
+
+# Pointers
 
 Pointers are similar to C in how they are declared.
 
@@ -69,6 +75,8 @@ byte* ptr;
 ```
 
 Working with pointers is considered unsafe (not that it's unsafe, but there is a keyword unsafe).
+
+# Type conversion stuff
 
 Type conversions happen in a similar manner to C.  They can happen implicitly or through casting.  You can also use type conversion methods.
 
@@ -88,12 +96,18 @@ void TreatAnimalAsCat(Animal a) {
 }
 ```
 
+# Loops and Control
+
 loops and if logic generally seems the same as C.
+
+# Visibility
 
 public, private, and protected seem similar to C++.  internal is new and allows any function or class within the given file to access the member???
 
-The string replacement for WriteLine use similar syntax to python format string calls.  It uses {0} for first parameter, {1} for second, and so on..
+# Passing parameters
 
 If you specify the keyword "out" in a function parameter declaration, modifying the parameters in the function will modify them externally (like passing an object by pointer or reference in C).  "ref" seems to do something similar.
+
+# Operator differences
 
 null == NULL, ?? is a coalescing operator
